@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">BlogZilla</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+         
+          <% if (locals.user) { %>
+         
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/create">
+                CreateBlog</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                 <span class="text-primary">Logged in</span>
+              </a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/user/blogs">MyBlogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user/logout">logout</a>
+            </li>
+             
+           
+           
+            
+            </ul>
+          </li> 
+           
+          <% } else {%>
+            <a class="nav-link" href="/login">Login/signup</a>
+            <% } %>
+          
+         
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</nav>
+<% if (locals.message) { %>
+  <div class=" container alert alert-success my-4"><%= message %></div>
+ 
+<% } %>
+<% if (locals.error) { %>
+  <div class=" container alert alert-danger my-4"><%= error %></div>
+ 
+<% } %>
+</body>
+</html>
+
+<!--<li class="nav-item">
+              <a class="nav-link text-danger" href="#"></a>
+            </li>-->
