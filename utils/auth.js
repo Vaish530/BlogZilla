@@ -1,6 +1,6 @@
 const jwt=require("jsonwebtoken");
 const User=require("../models/user");
-const JWT_secret="v@ishn@vi";
+const JWT_secret="replace with your secret code";
 async function generateTokenForUser(id)
 {
   const user=await User.findById(id);
@@ -25,6 +25,3 @@ module.exports={
   validateToken,
 };
 
-
-//vaishnavi is secret token
-//what is payload
