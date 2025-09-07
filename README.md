@@ -34,6 +34,7 @@ cd blog-zilla
 npm install
 npm init -y
 npm start
+run as node server js
 
 JWT Authentication Flow
 Signup: Users can sign up by providing a username, email, and password. Upon successful signup, a JWT token will be issued.
